@@ -24,7 +24,8 @@ module Facon
       super(method, *args, &block)
     rescue NameError
       # An unexpected method was called on this mock.
-      mock_proxy.raise_unexpected_message_error(method, *args)
+      #mock_proxy.raise_unexpected_message_error(method, *args)
+      puts "Method Missing: " + method.inspect
     end
 
     private
